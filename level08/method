@@ -1,0 +1,17 @@
+Nous avons encore une fois un executable dans ce lvl et un fichier token
+malheureusement nous avons pas les droit 'execution de read ou write sur le fichier token
+grace a la commande strings on peut savoir que notre executable a besoin d'un argument qui est un fichier surement le token
+
+Pour avoir a ce moment la tout les droit sur le fichier pour executer notre programme nous allons creer un repertoir dans le rep /tmp en lui donnant tout les droit
+et aussi creer un lien symblique entre le fichier que nous avons pas les droits et un fichier que nous allons creer dans le repertoir creer:
+
+	-> ln -s ~/token /tmp/level08/Token
+		Ceci nous permet de creer un lien symbolique entre le fichier sans droit token et notre fichier Token dans lequelle nous avons tout les droits
+
+	Une fois fait nous allons executer notre programme avec comme argument notre fichier Token:
+	./level08 /tmp/level08/Token
+
+	il nous retourne donc un flag:
+	-> quif5eloekouj29ke0vouxean
+
+	on utilise la commande su level08 et on donne le password notre flag celui donc apres sont executions nous fourni notre token

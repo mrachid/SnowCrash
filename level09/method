@@ -1,0 +1,12 @@
+Nous avons un exectuable et un fichier token une fois avoir donner le fichier token a l'executable on peu voir 	qu'il nous donne un code
+Mais a force de faire plusieur test on peut voir que l'executable code l'argument il fait une rotation malheureusement il fait une rotation sur le nom du fichier
+et non sont contenu
+
+Nous allons donc creer un programme qui fait permettre de faire une rotation inverse du token celui si nous fournira le password pour recuperer le token
+Nous compilons notre programme lvl09.c et nous executons le programme avec le fichier token de la racine en argument
+celui si va faire une rotation qui nous fournira le flag:
+
+ -> f3iji1ju5yuevaus41q1afiuq
+ 
+ Une fois avoir recuperer le flag nous pouvons recuperer le token :
+ -> s5cAJpM8ev6XHw998pRWG728z

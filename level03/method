@@ -1,0 +1,18 @@
+Nous avons un executable pour passer le lvl,
+
+	-> En excutant l'executable on voie que notre programme nous demande de l'exploiter
+	-> On utilise la commande strings sur l'executable afin de voir ce que utilise notre executable comme commande
+	   autre
+
+	-> On peu voir que l'excutable utilise ma commande echo afin d'afficher le mots " Exploit me "
+	-> Il utilise l;environnement et la variable PATH afin de trouver la commande echo et d'excuter celle ci,
+	   ce que l'on va faire et de faire de changer l'environnement PATH et de faire croire que notre commande getflag au       lieu de echo
+
+	   -> On creer un dossier test dans le repertoire /tmp afin d'avoir les droits
+	   -> On copie la commande echo dans ce dossier test et on modifie sont nom enn getflag
+	   -> nous changeons la variable PATH de l'environnement
+	   			-> PATH=/tmp/test:$PATH
+
+		Nous executons l'executable est par defaut la commande echo sera du coup notre getflag et nous donne la reponse 		suivante:
+
+		Check flag.Here is your token : qi0maab88jeaj46qoumi7maus

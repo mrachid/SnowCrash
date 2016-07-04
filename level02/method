@@ -1,0 +1,9 @@
+
+On utilise une commande shell afin de lire le fichier ressource du level02
+	tcpdump -AA -X -r "nom du fichier"
+	
+	resultat : Affichage des paquets ( communication entre client et serveur )
+	le client demande au server le password et le server lui renvoi en hexa lettre par lettre a partir de la
+	nous devons recuperer les lettre retourner par le server et il suffit de convertir le code hexa pour recuperer le code
+
+	resulat : ft_waNDReL0l

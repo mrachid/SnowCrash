@@ -1,0 +1,15 @@
+Je parcours tout les fichier et repertoire du shell avec la commande suivante et je recherche le mots "passwd"
+Commande shell : ls -la etc | grep -r -H "passwd"
+
+	-> resultat :" permet de trouver un fichier passwd dans le repertoir etc
+	-> afficher le fichier passwd
+
+	-> resultat : flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+
+	on remarque un semblant de token
+	malheuresement apres un test il est code 42hDRfypTqqnw
+
+	On utilise le logiciel john the ripper afin de decoder le semblant de token :
+	-> resultat : abcdef
+
+	Ceci est donc le password afin pour recuperer le token

@@ -1,0 +1,17 @@
+	-> Nous avons dans ce lvl un programme en perl et on peut voir qu'il utilise la commande echo donc on suppose qu'il 
+	doit surement afficher notre token
+
+	-> On peut comprendre que le programme perl a besoin d'un params 'x'
+
+	-> Nous avons aussi une autre information le port 4747 qui permet de voir ou est rediriger notre token
+	afin d'avoir acces au token nous allons ouvrire notre navigateur et lui mettre comme adresse :
+			-> 10.12.1.135:4747/?x=`getflag`
+					
+					-> 10.12.1.135:4747/ => ceci est l'adresse IP d notre VM ainsi que notre port 4747
+					de notre programme
+					
+					-> ?x=`getflag`	=> ceci est donc le params 'x' qui se trouve etre notre commande `getflag`
+					
+					Ceci nous renvoi donc une page html avec notre token dedans :
+					
+					Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap

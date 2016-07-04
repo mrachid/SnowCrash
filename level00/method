@@ -1,0 +1,18 @@
+Je parcours tout les fichier et repertoire du shell avec la commande suivante et je cherche le mots "flag00"
+Commande shell : ls -laR / 2>dev/null | grep -B 1000 "flag00"
+	
+	ls -laR : permet de lister tout les elements de cet environnement 
+	/ 2>dev/null : permet de rediriger les erreurs dans null
+	grep -B 1000 "flag00" : permet de lister le nombre d'element qui precede la chaine trouver afin de savoir ou est situer le fichier
+
+	-> resultat : fichier john
+	-> dans le repertoire usr/sbin
+
+
+
+Cat le fichier john
+	-> resultat : cdiiddwpgswtgt
+	coder en cesar car apres tester l'authentification fail
+	une fois decode on recupere plusieur mots de passe a essayer dont le bon 
+
+	password : nottoohardhere

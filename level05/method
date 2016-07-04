@@ -1,0 +1,32 @@
+De base le lvl nous fournie aucune information exploitable a nous de trouver donc un fichier ou repertoir que nous pouvons exploiter
+
+Apres recherche on peu trouver un fichier level05 dans le repertoir /var/mail une fois que l'on affiche ce fichier il nous retourne:
+
+	-> */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+
+	Apres des recherche on peu comprendre que ce fichier execture un script sh dans le repertoire 
+	/usr/sbin/openarenaerver
+
+	*/2 * * * * ceci est un code cron cela nous indique que le script sera executer toute les 2min
+	su -c les cettes options permet de forcer l'executions
+
+	Nous nous redirigeons vers le repertoir /usr/sbin/openarenaserver et nous pouvons voir que ceci :
+
+		#!/bin/sh
+
+		for i in /opt/openarenaserver/* ; do
+			(ulimit -t 5; bash -x "$i")
+			rm -f "$i"
+		done
+
+
+	Ce scripte nous indique qu'il lance un autre scripte dans le repertoir /opt/openarenaserver et une fois excuter
+	il supprime la valeur de retour notre mission est donc ce creer un scripte dans ce repertoire et de rediriger 
+	le retour de notre script dans un fichier que l'on peut exploiter
+	voici le script sh que nous allons creer dans le repertoire:
+
+	`getflag` > /tmp/level05/mdp
+
+	Bien sur nous avons creer et donne les droits au fichier mdp
+
+	Une fois que les deux minute sont nous pouvons voir le token : viuaaale9huek52boumoomioc

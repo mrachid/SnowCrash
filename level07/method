@@ -1,0 +1,17 @@
+Le lvl nous fournis un executable afin de comprendre un peu comment l'executable fonctionne,
+nous utilisons la commande strings ./level07
+
+celle ci nous permet de savoir ce que appelle notre executable comme fonction
+
+on peux remarquer qu'il y a une commande echo %s et LOGNAME juste avant celle ci
+de ce faite on peux comprendre que le programme nous execute notre echo sur la variable LOGNAME
+
+Nous allons donc changer la variable LOGNAME de notre environement afin d'exectuer la function getflag
+
+	-> LOGNAME=";getflag;"
+
+	les points virgule permet de comprendre que nous voulons executer une fonction qui est getflag
+	ceci nous permet a la fin de trouver notre token une fois que l'on execute notre programme
+
+	Le prg nous retourne donc notre token :
+	-> fiumuikeil55xe9cu4dood66h
