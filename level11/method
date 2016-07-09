@@ -1,0 +1,9 @@
+En fesant un cat sur le fichier fournis on releve un nom de serveur et un port du coup nous utilisoon la commande telnet afin d'etablir une connexion :
+
+	-> telnet 127.0.0.1 5151
+
+	Telnet nous demande un password nous lui injectons une commande shell afin de recuperer le contenu de getflag dans un fichier:
+
+	-> while true;/bin/getflag > /tmp/lvl11/mdp
+
+	Il nous retourne enfin le resultat qui est le token

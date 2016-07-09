@@ -1,0 +1,8 @@
+Nous executons la commande cat sur le fichier perl qui nous est fourni on peut voir que le programme nous demande 2 argument x et y et on peu 
+comprendre que la regex lis seulement les nom des fichier en majuscule de ce faite, nous creeons un script en majuscule afin de lancer la commande getflag et retourner
+le resultat dans un fichier mdp afin de connaitre le token:
+
+Une fois cela fait, nous ouvrons un navigateur avec le liens suivant:
+	-> 192.168.0.20:4646/?x=`/*/LVL/SCRIPT`&y=random
+
+	Le Script nous l'aurons bien sur ajotuer dans le repertoir tmp afin d'avoir les plein droit

